@@ -1,5 +1,7 @@
 package com.project.betelguese.app.screens;
 
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.io.IOException;
 
 import org.controlsfx.dialog.Dialogs;
