@@ -5,24 +5,42 @@ public class NewUser {
 	private String fristName;
 	private String lastName;
 	private String password;
+	private String username;
 	private String administratorLevel;
 
 	public NewUser() {
-		this(null, null, null, null);
+		this(null, null, null, null, null);
 	}
 
 	/**
+	 * @param username
 	 * @param fristName
 	 * @param lastName
 	 * @param password
 	 * @param administratorLevel
 	 */
-	public NewUser(String fristName, String lastName, String password,
-			String administratorLevel) {
+	public NewUser(String username, String fristName, String lastName,
+			String password, String administratorLevel) {
+		this.username = username;
 		this.fristName = fristName;
 		this.lastName = lastName;
 		this.password = password;
 		this.administratorLevel = administratorLevel;
+	}
+
+	/**
+	 * @return the username
+	 */
+	public String getUsername() {
+		return username;
+	}
+
+	/**
+	 * @param username
+	 *            the username to set
+	 */
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	/**
@@ -93,8 +111,8 @@ public class NewUser {
 	@Override
 	public String toString() {
 		return "NewUser [fristName=" + fristName + ", lastName=" + lastName
-				+ ", password=" + password + ", administratorLevel="
-				+ administratorLevel + "]";
+				+ ", password=" + password + ", username=" + username
+				+ ", administratorLevel=" + administratorLevel + "]";
 	}
 
 }
