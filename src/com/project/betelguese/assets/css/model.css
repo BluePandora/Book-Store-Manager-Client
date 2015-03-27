@@ -1,0 +1,191 @@
+.background {
+	-fx-background-color: #E9EAED;
+}
+
+.log-in-icon {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0.0, 0, 5);
+}
+
+.check-boxx {
+	
+}
+
+.label {
+	-fx-font-size: 15pt;
+	-fx-font-family: "Museo Sans Rounded 300";
+	-fx-opacity: 1;
+	-fx-padding: 5 50 5 5;
+	-fx-text-fill: #f9f9f9;
+}
+
+.menuu-button {
+	-fx-background-color: null;
+}
+
+.menuu-button>.arrow-button>.arrow {
+	-fx-background-color: null;
+}
+
+.check-boxx>.box {
+	-fx-background-radius: 5;
+	-fx-border-radius: 2;
+	-fx-border-width: 3;
+	-fx-border-color: #1e1e1e;
+	-fx-background-color: #E9EAED;
+}
+
+.check-boxx:selected>.box>.mark {
+	-fx-background-color: #E9EAED;
+	-fx-shape:
+		"M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+}
+
+.check-boxx:pressed {
+	-fx-effect: dropshadow(gaussian, #0080c0, 2, 0.0, 0, 0);
+}
+
+.check-boxx:hover {
+	-fx-effect: dropshadow(gaussian, #0080c0, 10, 0.0, 0, 2);
+}
+
+.check-boxx:selected>.box {
+	-fx-background-color: #1e1e1e;
+}
+
+.log-in-icon:hover {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 25, 0.0, 0, 5);
+}
+
+.log-in-icon:pressed, .log-in-icon:default:hover:pressed {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.0, 0, 1);
+}
+
+.label-bright {
+	-fx-font-size: 11pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-opacity: 1;
+}
+
+.label-header {
+	-fx-font-size: 32pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-opacity: 1;
+}
+
+.table-view {
+	-fx-background-color: #1d1d1d;
+	-fx-padding: 5;
+}
+
+.table-view .column-header-background {
+	-fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+	-fx-size: 35;
+	-fx-border-width: 0 0 1 0;
+	-fx-background-color: transparent;
+	-fx-border-color: transparent transparent derive(-fx-base, 80%)
+		transparent;
+	-fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+	-fx-font-size: 20pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-alignment: center-left;
+	-fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+	-fx-background-color: -fx-focus-color;
+}
+
+.split-pane:horizontal>.split-pane-divider {
+	-fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+	-fx-background-color: transparent, derive(#1d1d1d, 20%);
+}
+
+.split-pane {
+	-fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+	-fx-background-color: derive(#1d1d1d, 20%);
+}
+
+.context-menu {
+	-fx-background-color: derive(#1d1d1d, 50%);
+}
+
+.menu-bar .label {
+	-fx-font-size: 14pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-opacity: 0.9;
+}
+
+.menu .left-container {
+	-fx-background-color: black;
+}
+
+.text-field {
+	-fx-background-color: #FAFAFA;
+	-fx-text-fill: #1A1A1A;
+	-fx-prompt-text-fill: #6A6A6A;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.password-field {
+	-fx-background-color: #FAFAFA;
+	-fx-text-fill: #1A1A1A;
+	-fx-prompt-text-fill: #6A6A6A;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.vbox {
+	-fx-background-color: #FAFAFA;
+	-fx-background-radius: 10 10 10 10;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1);
+}
+
+.vbox:hover {
+	-fx-background-color: #FAFAFA;
+	-fx-background-radius: 10 10 10 10;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.0, 0, 1);
+}
+
+.vbox-divider {
+	-fx-background-color: #9A9A9A;
+	-fx-background-radius: 0 0 0 0;
+}
+
+.combo-box {
+	-fx-background-color: #CACACA;
+	-fx-background-radius: 5 5 5 5;
+	-fx-font-size: 11pt;
+	-fx-font-family: "MuseoSansRounded-700";
+	-fx-text-fill: white;
+}
+
+.button {
+	-fx-background-color: #1063b3;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 10, 0.0, 0, 2);
+}
+
+.button:hover {
+	-fx-background-color: #10639f;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 15, 0.0, 0, 3);
+}
+
+.button:pressed, .button:default:hover:pressed {
+	-fx-background-color: #10639f;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0.0, 0, 1);
+}
+

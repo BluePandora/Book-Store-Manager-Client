@@ -1,0 +1,225 @@
+.background {
+	-fx-background-color: #b8dbef;
+}
+
+.settings-icon {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.0, 0, 2);
+	-fx-background-image: url("ic_settings_white.png");
+}
+
+.settings-icon:hover {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 15, 0.0, 0, 2);
+}
+
+.settings-icon:pressed, .settings-icon:default:hover:pressed {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 5, 0.0, 0, 1);
+}
+
+.transparent {
+	-fx-background-color: null;
+}
+
+.header {
+	-fx-background-color: #004293;
+}
+
+.label {
+	-fx-font-size: 14pt;
+	-fx-font-family: "MuseoSansRounded-700";
+	-fx-text-fill: #323232;
+	-fx-opacity: 1;
+}
+
+.label-bright {
+	-fx-font-size: 14pt;
+	-fx-font-family: "MuseoSansRounded-700";
+	-fx-text-fill: #0000a0;
+	-fx-opacity: 1;
+}
+
+.label-header {
+	-fx-font-size: 14pt;
+	-fx-font-family: "MuseoSansRounded-700";
+	-fx-text-fill: #ffffff;
+	-fx-opacity: 1;
+}
+
+.header-book {
+	-fx-font-size: 20pt;
+	-fx-font-family: "MuseoSansRounded-700";
+	-fx-text-fill: #ffffff;
+	-fx-opacity: 1;
+}
+
+.table-view {
+	-fx-background-color: #fbfbfb;
+	-fx-padding: 5;
+	-fx-background-radius: 2;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 1);
+}
+
+.table-view:hover {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0.0, 0, 1);
+}
+
+.table-view .column-header-background {
+	-fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+	-fx-size: 35;
+	-fx-border-width: 0 0 1 0;
+	-fx-background-color: transparent;
+	-fx-border-color: black;
+	-fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+	-fx-text-fill: #1d1d1d;
+	-fx-alignment: center-left;
+	-fx-opacity: 1;
+	-fx-font-size: 11pt;
+	-fx-font-family: MuseoSansRounded-700;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+	-fx-background-color: -fx-focus-color;
+}
+
+.split-pane:horizontal>.split-pane-divider {
+	-fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+	-fx-background-color: transparent, derive(#1d1d1d, 20%);
+}
+
+.split-pane {
+	-fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+	-fx-background-color: derive(#1d1d1d, 20%);
+}
+
+.context-menu {
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-background-color: derive(#1d1d1d, 50%);
+}
+
+.combo-box {
+	-fx-background-color: #CACACA;
+	-fx-background-radius: 5 5 5 5;
+	-fx-font-size: 11pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-border-color: #212121;
+	-fx-border-radius: 5 5 5 5;
+	-fx-border-width: 2px;
+	-fx-background-insets: 1px;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 2);
+}
+
+.combo-box:hover {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 18, 0.0, 0, 2);
+}
+
+.combo-box:pressed {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 2);
+}
+.list-cell{
+	-fx-font-size: 16px;
+	-fx-font-family: "Museo Sans Rounded 700";
+}
+.menu-bar .label {
+	-fx-font-size: 14pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-opacity: 0.9;
+}
+
+.menu .left-container {
+	-fx-background-color: black;
+}
+
+.text-field {
+	-fx-background-color: #FAFAFA;
+	-fx-text-fill: #05018a;
+	-fx-prompt-text-fill: #3A3A3A;
+	-fx-background-radius: 2 2 2 2;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1);
+}
+
+.text-field:hover {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.0, 0, 1);
+}
+
+.password-field {
+	-fx-background-color: #FAFAFA;
+	-fx-text-fill: #1A1A1A;
+	-fx-prompt-text-fill: #6A6A6A;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.combo-box {
+	-fx-background-color: #CACACA;
+	-fx-background-radius: 5 5 5 5;
+	-fx-font-size: 11pt;
+	-fx-font-family: "MuseoSansRounded-300";
+	-fx-text-fill: white;
+	-fx-border-color: #212121;
+	-fx-border-radius: 5 5 5 5;
+	-fx-border-width: 2px;
+	-fx-background-insets: 1px;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 2);
+}
+
+.combo-box:hover {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 18, 0.0, 0, 2);
+}
+
+.combo-box:pressed {
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 2);
+}
+
+.scroll-bar {
+	-fx-background-color: #FFFFFF;
+}
+
+.scroll-bar>.thumb {
+	-fx-background-color: #5A5A5A;
+	/*-fx-background-insets: 1, 2, 3;*/
+	-fx-background-insets: 2, 3, 4;
+	/*-fx-background-radius: 0.416667em, 0.333333em, 0.25em; */
+	/* 5, 4,3 */
+	-fx-background-radius: 2;
+}
+
+.scroll-bar>.increment-button, .scroll-bar>.decrement-button {
+	-fx-background-color: #FFFFFF;
+}
+
+.scroll-bar>.increment-button:hover, .scroll-bar>.decrement-button:hover
+	{
+	-fx-background-color: #d2d2d2;
+}
+
+.scroll-bar>.increment-button:pressed, .scroll-bar>.decrement-button:pressed
+	{
+	-fx-background-color: #5A5A5A;
+}
+
+.button {
+	-fx-background-color: #ff4646;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 10, 0.0, 0, 2);
+}
+
+.button:hover {
+	-fx-background-color: #ff1414;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 15, 0.0, 0, 3);
+}
+
+.button:pressed, .button:default:hover:pressed {
+	-fx-background-color: #ff1414;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0.0, 0, 1);
+}

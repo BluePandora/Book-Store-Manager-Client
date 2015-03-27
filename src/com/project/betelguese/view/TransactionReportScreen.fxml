@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@../assets/css/transaction-screen-model.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.betelguese.app.screens.TransactionReportScreen">
+   <children>
+      <TableView fx:id="transactionIdTable" prefHeight="600.0" prefWidth="250.0">
+        <columns>
+          <TableColumn fx:id="transactionIdColumn" prefWidth="250.0" text="Transaction ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="transactionBookTable" layoutX="261.0" layoutY="141.0" prefHeight="400.0" prefWidth="725.0">
+        <columns>
+          <TableColumn fx:id="bookIdColumn" prefWidth="75.0" text="Books Id" />
+          <TableColumn fx:id="bookNameColumn" prefWidth="405.0" text="Books Name" />
+            <TableColumn fx:id="rateColumn" prefWidth="60.0" text="Rate" />
+            <TableColumn fx:id="quantityColumn" text="Quantity" />
+            <TableColumn fx:id="amountColumn" prefWidth="100.0" text="Amount" />
+        </columns>
+      </TableView>
+      <HBox layoutX="762.0" layoutY="568.0" spacing="5.0">
+         <children>
+            <Label text="Total Amount:" />
+            <Text fx:id="amountText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox layoutX="660.0" layoutY="47.0" spacing="10.0">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Seller Name:" />
+                  <Text fx:id="adminNameText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="Sajid Shahriar">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Seller ID:" />
+                  <Text fx:id="adminIdText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="12345678">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Seller Time:" />
+                  <Text fx:id="transactionTimeText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="12345678">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="264.0" layoutY="40.0" spacing="10.0">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Transaction ID:" />
+                  <Text fx:id="transactionIdText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="Sajid Shahriar">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Customer Name:" />
+                  <Text fx:id="customerNameText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="Sajid Shahriar">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Customer Number:" />
+                  <Text fx:id="customerNumberText" fill="#05018a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="12345678">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

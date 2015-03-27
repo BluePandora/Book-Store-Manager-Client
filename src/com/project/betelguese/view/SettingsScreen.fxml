@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane stylesheets="@../assets/css/settings-screen-model%20.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.betelguese.app.utils.SettingsDialog">
+	<children>
+		<Pane prefHeight="50.0" prefWidth="500.0">
+			<children>
+				<Label prefHeight="50.0" prefWidth="162.0" text="Settings" textFill="WHITE">
+					<font>
+						<Font size="26.0" />
+					</font>
+				</Label>
+			</children>
+		</Pane>
+		<ListView fx:id="optionList" layoutY="50.0" prefHeight="250.0" prefWidth="200.0">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="Change Password" />
+					<String fx:value="Change Name" />
+					<String fx:value="Create new User" />
+				</FXCollections>
+			</items>
+		</ListView>
+		<Pane fx:id="changePasswordPane" layoutX="250.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+			<children>
+				<VBox spacing="20.0">
+					<children>
+						<PasswordField fx:id="oldPassword" promptText="Old Password" />
+						<PasswordField fx:id="newPassword" promptText="New Password" />
+						<PasswordField fx:id="confirmPassword" promptText="Confirm Password" />
+					</children>
+				</VBox>
+				<Button fx:id="changePasswordButton" layoutX="110.0" layoutY="165.0" mnemonicParsing="false" onAction="#changePasswordAction" text="Change">
+					<font>
+						<Font name="MuseoSansRounded-700" size="18.0" />
+					</font>
+				</Button>
+			</children>
+		</Pane>
+		<Pane fx:id="changeNamePane" layoutX="250.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+			<children>
+				<VBox spacing="20.0">
+					<children>
+						<TextField fx:id="changeFirstName" promptText="First Name" />
+						<TextField fx:id="changeLastName" promptText="Last Name" />
+					</children>
+				</VBox>
+				<Button fx:id="changeNameButton" layoutX="110.0" layoutY="165.0" mnemonicParsing="false" onAction="#changeNameAction" text="Change">
+					<font>
+						<Font name="MuseoSansRounded-700" size="18.0" />
+					</font>
+				</Button>
+			</children>
+		</Pane>
+		<Pane fx:id="newUserPane" layoutX="200.0" layoutY="50.0" prefHeight="250.0" prefWidth="300.0" visible="false">
+			<children>
+				<VBox layoutX="6.0" prefHeight="229.0" prefWidth="193.0" spacing="20.0">
+					<children>
+						<TextField fx:id="newUserFirstName" promptText="First Name" />
+						<TextField fx:id="newUserLastName" promptText="Last Name" />
+						<TextField fx:id="newUsername" promptText="Username" />
+						<PasswordField fx:id="newUserPassword" promptText="Password" />
+						<ComboBox fx:id="newUserRoll" prefHeight="29.0" prefWidth="191.0" promptText="Select Admin Roll">
+							<items>
+								<FXCollections fx:factory="observableArrayList">
+									<String fx:value="admin" />
+									<String fx:value="seller" />
+								</FXCollections>
+							</items>
+						</ComboBox>
+					</children>
+				</VBox>
+				<Button fx:id="newUserCreateButton" layoutX="206.0" layoutY="201.0" mnemonicParsing="false" onAction="#newUserCreateAction" text="Create">
+					<font>
+						<Font name="MuseoSansRounded-700" size="18.0" />
+					</font>
+				</Button>
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.collections.FXCollections ?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@../assets/css/report-screen-model.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.betelguese.app.screens.ReportScreen">
+	<children>
+		<ComboBox fx:id="reportOption" layoutX="14.0" layoutY="47.0" prefHeight="50.0" prefWidth="230.0" promptText="Select Report Option" styleClass="combo-box" visibleRowCount="4">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="By Day" />
+					<String fx:value="By Month" />
+					<String fx:value="By Year" />
+					<String fx:value="By Transaction" />
+
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Label layoutX="14.0" layoutY="14.0" text="Report Option:" />
+		<Button layoutX="541.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleShowingReport" prefHeight="50.0" prefWidth="230.0" text="SHOW REPORT" textFill="#1a1a1a">
+			<font>
+				<Font name="MuseoSansRounded-700" size="18.0" />
+			</font>
+		</Button>
+      <Pane fx:id="yearPane" layoutX="8.0" layoutY="112.0" prefHeight="101.0" prefWidth="243.0" visible="false">
+         <children>
+      		<Label layoutX="9.0" layoutY="17.0" text="Select Year:" />
+      		<ComboBox fx:id="yearOption" layoutX="7.0" layoutY="51.0" prefHeight="50.0" prefWidth="230.0" promptText="Select a Year" styleClass="combo-box" visibleRowCount="4">
+      			<items>
+      				<FXCollections fx:factory="observableArrayList">
+				</FXCollections>
+      			</items>
+      		</ComboBox>
+         </children>
+      </Pane>
+      <Pane fx:id="monthPane" layoutX="273.0" layoutY="114.0" prefHeight="101.0" prefWidth="243.0" visible="false">
+         <children>
+      		<ComboBox fx:id="monthOption" layoutX="2.0" layoutY="48.0" prefHeight="50.0" prefWidth="230.0" promptText="Select a Month" styleClass="combo-box" visibleRowCount="4">
+      			<items>
+      				<FXCollections fx:factory="observableArrayList">
+      					<String fx:value="January" />
+      					<String fx:value="February" />
+      					<String fx:value="March" />
+      					<String fx:value="April" />
+      					<String fx:value="May" />
+      					<String fx:value="June" />
+      					<String fx:value="July" />
+      					<String fx:value="August" />
+      					<String fx:value="September" />
+      					<String fx:value="October" />
+      					<String fx:value="November" />
+      					<String fx:value="December" />
+      				</FXCollections>
+      			</items>
+      		</ComboBox>
+      		<Label layoutX="2.0" layoutY="14.0" text="Select month:" />
+         </children>
+      </Pane>
+      <Pane fx:id="chartPane" layoutX="276.0" layoutY="-1.0" prefHeight="101.0" prefWidth="243.0" visible="false">
+         <children>
+      		<Label layoutX="4.0" layoutY="14.0" text="Report Chart:" />
+      		<ComboBox fx:id="chartOption" layoutX="1.0" layoutY="47.0" prefHeight="50.0" prefWidth="230.0" promptText="Select Chart Option" styleClass="combo-box" visibleRowCount="4">
+      			<items>
+      				<FXCollections fx:factory="observableArrayList">
+      					<String fx:value="Bar Chart" />
+      					<String fx:value="Area Chart" />
+      					<String fx:value="Pie Chart" />
+      					<String fx:value="Line Chart" />
+      				</FXCollections>
+      			</items>
+      		</ComboBox>
+         </children>
+      </Pane>
+	</children>
+</AnchorPane>

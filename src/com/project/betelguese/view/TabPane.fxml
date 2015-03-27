@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane stylesheets="@../assets/css/transaction-screen-model.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.betelguese.app.screens.MainScreen">
+	<children>
+      <StackPane id="screenHolderPane" fx:id="screenHolderPane" layoutY="101.0" prefHeight="500.0" prefWidth="800.0" styleClass="background" />
+		<Pane layoutY="51.0" styleClass="tab-background">
+			<children>
+				<HBox prefHeight="50.0" prefWidth="800.0">
+					<children>
+						<ToggleButton id="searchTabButton" fx:id="searchTabButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTabButton" prefWidth="200.0" selected="true" styleClass="tab-button" text="SEARCH">
+							<font>
+								<Font name="MuseoSansRounded-700" size="18.0" />
+							</font>
+						</ToggleButton>
+						<ToggleButton id="transactionTabButton" fx:id="transactionTabButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleTabButton" prefWidth="200.0" selected="false" styleClass="tab-button" text="TRANSACTION">
+							<font>
+								<Font name="MuseoSansRounded-700" size="18.0" />
+							</font>
+						</ToggleButton>
+						<ToggleButton id="updateTabButton" fx:id="updateTabButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleTabButton" prefWidth="200.0" selected="false" styleClass="tab-button" text="UPDATE">
+							<font>
+								<Font name="MuseoSansRounded-700" size="18.0" />
+							</font>
+						</ToggleButton>
+						<ToggleButton id="reportTabButton" fx:id="reportTabButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleTabButton" prefWidth="200.0" selected="false" styleClass="tab-button" text="REPORT">
+							<font>
+								<Font name="MuseoSansRounded-700" size="18.0" />
+							</font>
+						</ToggleButton>
+
+      					</children>
+				</HBox>
+            <Pane layoutX="200.0" layoutY="8.0" prefHeight="30.0" prefWidth="1.0" styleClass="tab-divider" />
+            <Pane layoutX="400.0" layoutY="8.0" prefHeight="30.0" prefWidth="1.0" styleClass="tab-divider" />
+            <Pane layoutX="600.0" layoutY="8.0" prefHeight="30.0" prefWidth="1.0" styleClass="tab-divider" />
+			</children>
+		</Pane>
+      <Pane prefHeight="50.0" prefWidth="800.0" styleClass="header">
+         <children>
+            <Label layoutX="14.0" layoutY="13.0" styleClass="label-header" text="Book Store Manager" textFill="WHITE" />
+            <Pane layoutX="746.0" layoutY="5.0" prefHeight="40.0" prefWidth="40.0" styleClass="settings-icon">
+               <children>
+                  <MenuButton ellipsisString="" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="menuu-button" stylesheets="@../assets/css/model.css" text="MenuButton">
+                    <items>
+                      <MenuItem id="settingsMenuitem" fx:id="settingsMenuitem" mnemonicParsing="false" onAction="#handleSettings" text="Settings" />
+                      <MenuItem id="logOutMenuitem" fx:id="logOutMenuitem" mnemonicParsing="false" onAction="#handleLogOut" text="Log Out" />
+                    </items>
+                  </MenuButton>
+               </children></Pane>
+         </children>
+      </Pane>
+	</children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainPane" fx:id="mainPane" maxHeight="720.0" maxWidth="1280.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="background" stylesheets="@../assets/css/model.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.betelguese.app.screens.LogInScreen">
+	<children>
+		<Pane layoutX="145.0" layoutY="53.0" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="53.0">
+			<children>
+				<ImageView fitHeight="128.0" fitWidth="128.0" layoutX="170.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" styleClass="log-in-icon">
+					<image>
+						<Image url="@../assets/images/flat_book_icon.png" />
+					</image>
+				</ImageView>
+				<Button id="logInButton" fx:id="logInButton" layoutX="109.0" layoutY="350.0" lineSpacing="3.0" mnemonicParsing="false" onAction="#handleLogInButton" prefHeight="50.0" prefWidth="250.0" text="LOG IN" textAlignment="CENTER" textFill="#ffffff">
+					<font>
+						<Font name="MuseoSansRounded-700" size="18.0" />
+					</font>
+				</Button>
+				<TilePane alignment="CENTER" layoutX="109.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0">
+					<children>
+						<VBox prefHeight="125.0" prefWidth="250.0" spacing="10.0" styleClass="vbox">
+							<children>
+								<TextField id="userNameField" fx:id="userNameField" onAction="#handleLogInButton" prefHeight="50.0" prefWidth="250.0" promptText="Username" text="tuman_hacker">
+									<font>
+										<Font name="MuseoSansRounded-700" size="18.0" />
+									</font>
+								</TextField>
+								<Pane prefHeight="2.0" prefWidth="250.0" styleClass="vbox-divider" />
+								<PasswordField id="passwordField" fx:id="passwordField" prefHeight="50.0" prefWidth="250.0" promptText="Password " styleClass="password-field" text="tuman123">
+									<font>
+										<Font name="MuseoSansRounded-700" size="18.0" />
+									</font>
+								</PasswordField>
+							</children>
+						</VBox>
+					</children>
+				</TilePane>
+			</children>
+		</Pane>
+	</children>
+	<padding>
+		<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+	</padding>
+</AnchorPane>

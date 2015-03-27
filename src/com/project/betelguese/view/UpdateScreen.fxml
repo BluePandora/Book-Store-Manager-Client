@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@../assets/css/update-screen-model.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.betelguese.app.screens.UpdateScreen">
+	<children>
+      <HBox layoutX="471.0" layoutY="436.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="50.0" prefWidth="150.0" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="MuseoSansRounded-700" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="350.0" layoutY="10.0" styleClass="label-new" text="Update List:" textFill="#00a3b8" />
+      <Pane prefHeight="500.0" prefWidth="200.0" styleClass="white-background">
+         <children>
+      		<TableView id="searchTableView" fx:id="searchTableView" prefHeight="500.0" prefWidth="200.0" styleClass="update-table-view">
+      			<columns>
+      				<TableColumn id="booksId" fx:id="booksId" prefWidth="190.0" resizable="false" text="Book ID" />
+      			</columns>
+      		</TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="detailPane" layoutX="235.0" layoutY="49.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox spacing="50.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Books Id:" />
+                              <Label fx:id="booksIdLabel" styleClass="label-details" text="2" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="ISBN:" />
+                              <Label fx:id="ISBNLabel" styleClass="label-details" text="12345" textFill="#3b00ff" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="Books Name:" />
+                        <Label fx:id="booksNameLabel" styleClass="label-details" text="An Introduction to Statistics and Probability" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="Author:" />
+                        <Label fx:id="authorLabel" styleClass="label-details" text="M. Nurul Islam" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="Publisher:" />
+                        <Label fx:id="publisherLabel" styleClass="label-details" text="Mullick &amp; Brothers" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="Seller:" />
+                        <Label fx:id="administratorNameLabel" styleClass="label-details" text="Admin" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="70.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Price:" />
+                              <Label fx:id="priceLabel" styleClass="label-details" text="400" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Supplied" />
+                              <Label fx:id="quantityLabel" styleClass="label-details" text="5" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Available:" />
+                              <Label fx:id="stockLabel" styleClass="label-details" text="5" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="70.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Shelf:" />
+                              <Label fx:id="shelfLabel" styleClass="label-details" text="1" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Column" />
+                              <Label fx:id="columnLabel" styleClass="label-details" text="5" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Row:" />
+                              <Label fx:id="rowLabel" styleClass="label-details" text="5" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="Comment:" />
+                        <Label fx:id="commentLabel" styleClass="label-details" text="comment" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <HBox layoutX="306.0" layoutY="374.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAddButton" prefHeight="50.0" prefWidth="150.0" text="ADD..." textFill="WHITE">
+               <font>
+                  <Font name="MuseoSansRounded-700" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleEditButton" prefHeight="50.0" prefWidth="150.0" text="EDIT..." textFill="WHITE">
+               <font>
+                  <Font name="MuseoSansRounded-700" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="150.0" text="REMOVE..." textFill="WHITE">
+               <font>
+                  <Font name="MuseoSansRounded-700" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+	</children>
+</AnchorPane>
