@@ -35,6 +35,7 @@ import com.project.betelguese.server.connection.utils.Response.ErrorListener;
 import com.project.betelguese.server.connection.utils.Response.Listener;
 import com.project.betelguese.utils.items.ChangeName;
 import com.project.betelguese.utils.items.ChangePassword;
+import com.project.betelguese.utils.items.NewUser;
 import com.project.betelguese.utils.items.SettingsItem;
 
 public class SettingsDialog implements Initializable, URLHelper {
@@ -280,11 +281,51 @@ public class SettingsDialog implements Initializable, URLHelper {
 
 	@FXML
 	public void newUserCreateAction(ActionEvent event) {
+		if (newUserRoll.getValue() == null || newUserRoll.getValue().equals("")) {
+			Dialogs.create().masthead("You must select an admin roll.")
+					.showError();
+			return;
+		} else if (newUserFirstName.getText() == null
+				|| newUserFirstName.getText().equals("")) {
+			Dialogs.create().masthead("You must enter an first name.")
+					.showError();
+			return;
+
+		} else if (newUserLastName.getText() == null
+				|| newUserLastName.getText().equals("")) {
+			Dialogs.create().masthead("You must enter an last name.")
+					.showError();
+			return;
+
+		}
 		HashMap<String, String> params = new HashMap<String, String>();
+		params.put("requestName", "settingsRequest");
+		params.put("serviceKey", "createUser");
+		NewUser newUser = new NewUser();
+		newUser.setFristName(newUserFirstName.getText());
+		newUser.setUsername(newUsername.getText());
+		newUser.setLastName(newUserLastName.getText());
+		newUser.setPassword(newUserPassword.getText());
+		newUser.setAdministratorLevel(newUserRoll.getValue());
+		SettingsItem settingsItem = new SettingsItem(admin.getAdminId()
+				.getValue(), newUser);
+		Gson gson = new GsonBuilder().create();
+		params.put("serviceValue", gson.toJson(settingsItem));
 		ServerRequest<JSONObject> serverRequest = new ServerRequest<>(
 				Response.POST, URL, params, new Listener<JSONObject>() {
 					@Override
 					public void onResponse(JSONObject s) {
+						long done = (long) s.get("done");
+						if (done == 0) {
+							Dialogs.create()
+									.masthead("User name already exists.")
+									.showError();
+						} else {
+							Dialogs.create()
+									.masthead(
+											"New admin was Successfully created.")
+									.showConfirm();
+						}
 					}
 				}, new ErrorListener() {
 					@Override
