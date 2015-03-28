@@ -2,10 +2,10 @@ package com.project.betelguese.app.utils;
 
 import java.net.URL;
 
-public interface FxmlUrl {
+public class FxmlUrl {
 
-	public static final URL logInScreen = FxmlUrl.class
-			.getResource("/com/project/betelguese/view/LoginScreen.fxml");
+	public static final URL logInScreen = FxmlUrl.class.getClassLoader()
+			.getResource("com/project/betelguese/view/LoginScreen.fxml");
 	public static final URL searchScreen = FxmlUrl.class
 			.getResource("/com/project/betelguese/view/SearchScreen.fxml");
 	public static final URL transactionScreen = FxmlUrl.class

@@ -1,17 +1,17 @@
 package com.project.betelguese.app.utils;
 
+import static com.project.betelguese.app.utils.FxmlUrl.addBooksDialog;
+import static com.project.betelguese.app.utils.FxmlUrl.areaChartScreen;
+import static com.project.betelguese.app.utils.FxmlUrl.barChartScreen;
+import static com.project.betelguese.app.utils.FxmlUrl.lineChartScreen;
 import static com.project.betelguese.app.utils.FxmlUrl.logInScreen;
+import static com.project.betelguese.app.utils.FxmlUrl.pieChartScreen;
+import static com.project.betelguese.app.utils.FxmlUrl.reportScreen;
 import static com.project.betelguese.app.utils.FxmlUrl.searchScreen;
 import static com.project.betelguese.app.utils.FxmlUrl.tabPane;
+import static com.project.betelguese.app.utils.FxmlUrl.transactionReportScreen;
 import static com.project.betelguese.app.utils.FxmlUrl.transactionScreen;
 import static com.project.betelguese.app.utils.FxmlUrl.updateScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.reportScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.barChartScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.areaChartScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.lineChartScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.pieChartScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.transactionReportScreen;
-import static com.project.betelguese.app.utils.FxmlUrl.addBooksDialog;
 
 import java.io.IOException;
 

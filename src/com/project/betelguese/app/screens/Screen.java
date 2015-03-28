@@ -1,6 +1,6 @@
 package com.project.betelguese.app.screens;
 
-import static com.project.betelguese.app.utils.FxmlUrl.logInScreen;
+//import static com.project.betelguese.app.utils.FxmlUrl.logInScreen;
 
 import java.io.IOException;
 
@@ -22,7 +22,7 @@ abstract class Screen {
 
 	public <T> T findViewbyId(String locationId) throws IOException {
 		loader = new FXMLLoader();
-		loader.setLocation(logInScreen);
+		// loader.setLocation(logInScreen);
 		return loader.load();
 	}
 
